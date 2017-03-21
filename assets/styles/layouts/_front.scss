@@ -1,0 +1,124 @@
+#intro {
+  height: 100vh;
+  text-align: center;
+  background-image: url('../../assets/images/bg-1.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  padding-top: 10vh;
+
+  #bighead {
+    width: 25%;
+    display: block;
+    margin: 0 37.5% 0 37.5%;
+    padding: 50px 0;
+  }
+}
+
+#about {
+  text-align: center;
+  background-image: url('../../assets/images/bg-2.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+
+  .inner-content {
+    background: $white;
+    margin: 0 10%;
+    position: relative;
+    padding: 40px 40px;
+
+    p {
+      text-align: left;
+    }
+
+    .lefty {
+      display: inline-block;
+      vertical-align: top;
+      width: 49%;
+    }
+    .righty {
+      display: inline-block;
+      vertical-align: top;
+      width: 49%;
+
+      .cute-list {
+        text-align: left;
+        padding-left: 10px;
+        list-style: square inside url('../images/bullet.png')!important;
+      }
+    }
+  }
+}
+
+#tags {
+  text-align: center;
+  background-image: url('../../assets/images/bg-3.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+
+  .inner-content {
+    background: $white;
+    margin: 0 10%;
+    position: relative;
+    padding: 40px 40px;
+
+    .divider {
+      margin: 40px 0 60px;
+      width: 80%;
+    }
+
+    #popular-tags {
+      padding: 0 10%;
+    }
+
+    > h2 {
+      margin-bottom: 30px;
+    }
+
+    $ribbon-width: 200px;
+
+    .sticky-project {
+      display: inline-block;
+      margin: 0 $ribbon-width/$pi;
+
+      .ribbon {
+        position: relative;
+
+        > img {
+          width: $ribbon-width;
+          position: absolute;
+          top: -$ribbon-width/3.2;
+          left: -$ribbon-width/8;
+        }
+
+        > p.ribbon-text {
+          position: absolute;
+          top: -$ribbon-width/8;
+          left: 0;
+          text-align: center;
+          white-space: nowrap;
+          z-index: 9999999;
+
+          > span {
+            color: $white;
+            font-size: .9em;
+
+
+          }
+        }
+      }
+
+      > img {
+        width: $ribbon-width*.75;
+        border-radius: 50%;
+        border: $dark-blue 8px solid;
+      }
+    }
+
+  }
+}

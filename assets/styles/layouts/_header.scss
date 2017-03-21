@@ -1,0 +1,41 @@
+header.banner {
+  box-shadow: 0px 3px 2px #888888;
+  position: fixed;
+  top:0;
+  left:0;
+  right: 0;
+  background: white;
+  z-index: 999999;
+
+  .brand-logo {
+    padding: 10px 0;
+    width: 35px;
+  }
+
+
+  nav.nav-primary {
+    float: right;
+    overflow: hidden;
+    ul li {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 0;
+        position: relative;
+
+
+        a {
+          z-index: 999;
+          text-decoration: none;
+          &:link {
+            color: $dark-blue!important;
+          }
+          &:visited {
+            color: $dark-blue!important;
+          }
+          &:hover {
+            color: $orange!important;
+          }
+        }
+    }
+  }
+}

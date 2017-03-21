@@ -26,3 +26,20 @@ foreach ($sage_includes as $file) {
   require_once $filepath;
 }
 unset($file, $filepath);
+
+function send_contact_email()
+{
+  $to_email = 'james.levasseur@maine.edu';
+
+  $from = $_POST['first-name'].' '.$_POST['last-name'];
+
+  $subject = $_POST['subject'];
+
+  $message = $_POST['message'].' <br> Name given: '.$from;
+
+  $headers = array('Content-Type: text/html; charset=UTF-8');
+
+  wp_mail($to_email, $subject, $message, $headers);
+}
+
+add_action('send_contact_email', 'send_contact_email');

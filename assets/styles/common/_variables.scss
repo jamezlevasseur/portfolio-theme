@@ -3,5 +3,75 @@ $enable-flex:           true;
 $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
 
+$pi: 3.14159265359;
+
 // Colors
-$brand-primary:         #27ae60;
+$light-blue: #65D2FC;
+$dark-blue: #26AEEA;
+$white: white;
+$orange: #F9BA67;
+
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,700|Roboto:300');
+
+$cabin: 'Cabin', Verdana, sans-serif;
+$roboto: 'Roboto', Helvetica, sans-serif;
+
+$x-large: 26px;
+$large: 22px;
+$medium: 18px;
+$small: 14px;
+
+$phone: 480px;
+$bigphone: 667px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1420px;
+$bigscreen: 1600px;
+
+@mixin phone {
+  @media (min-width: #{$phone}) {
+    @content;
+  }
+}
+
+@mixin bigphone {
+  @media (min-width: #{$bigphone}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: #{$laptop}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin bigscreen {
+  @media (min-width: #{$bigscreen}) {
+    @content;
+  }
+}
+
+@function sqrt($r) {
+  $x0: 1;
+  $x1: $x0;
+
+  @for $i from 1 through 10 {
+    $x1: $x0 - ($x0 * $x0 - abs($r)) / (2 * $x0);
+    $x0: $x1;
+  }
+
+  @return $x1;
+}

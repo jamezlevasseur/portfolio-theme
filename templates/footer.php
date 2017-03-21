@@ -1,5 +1,44 @@
 <footer class="content-info">
   <div class="container">
-    <?php dynamic_sidebar('sidebar-footer'); ?>
+    <div class="row">
+
+      <div class="col-md-6">
+        <h4>Contact Me</h4>
+        <h5>Please fill out all fields.</h5>
+        <form id="contact-form" action="" method="post">
+          <input type="text" name="first-name" placeholder="First Name"><br>
+          <input type="text" name="last-name" placeholder="Last Name"><br>
+          <input type="text" name="subject" placeholder="Subject"><br>
+          <textarea name="message" rows="4" cols="30" placeholder="You message..."></textarea><br>
+          <input type="reset">
+          <input type="submit">
+        </form>
+      </div>
+      <div class="col-md-4">
+        <h4>Posts</h4>
+        <ul id="recent-posts-list">
+          <?php
+          wp_reset_query();
+          $posts = query_posts(['posts_per_page'=>10]);
+
+          while (have_posts()) {
+            the_post();
+            echo '<li><a href="'.get_the_permalink().'">'.get_the_title().'</a></li>';
+          }
+
+           ?>
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="<?php echo get_site_url() ?>">About</a></li>
+          <li><a href="<?php echo get_site_url().'blog' ?>">Blog</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <small>©Copyright <?php echo date("Y"); ?>, James LeVasseur</small>
   </div>
 </footer>

@@ -1,7 +1,15 @@
 {
   "dependencies": {
+
     "main.js": {
       "files": [
+        "bower_components/moment/moment.min.js",
+        "bower_components/moment-timezone/moment-timezone.min.js",
+        "scripts/setup.js",
+        "scripts/jquery.fittext.js",
+        "scripts/jquery.lettering.js",
+        "scripts/plugins.js",
+        "scripts/circletype.js",
         "scripts/main.js"
       ],
       "main": true
@@ -16,12 +24,9 @@
       "files": [
         "scripts/customizer.js"
       ]
-    },
-    "jquery.js": {
-      "bower": ["jquery"]
     }
   },
   "config": {
-    "devUrl": "http://example.dev"
+    "devUrl": "http://localhost:8888/portfolio"
   }
 }

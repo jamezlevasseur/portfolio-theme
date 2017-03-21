@@ -1,1 +1,146 @@
 
+html {
+  font-size: $small;
+  font-family: $cabin;
+
+  @include tablet {
+    font-size: $medium;
+  }
+
+  @include desktop {
+    font-size: $large;
+  }
+
+  @include bigscreen {
+    font-size: $x-large;
+  }
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+a {
+  cursor: pointer;
+
+  &:link {
+    color: $dark-blue;
+  }
+  &:visited {
+    color: $orange;
+  }
+  &:hover {
+    color: $light-blue;
+  }
+  &:active {
+    color: $light-blue;
+  }
+}
+
+a.categ {
+  color: #9E9E9E;
+  font-family: $roboto;
+  font-size: .9em;
+  font-weight: 300;
+  margin: 10px;
+
+  &:hover {
+    color: $light-blue;
+  }
+  &:active {
+    color: $light-blue;
+  }
+
+  &:before {
+    content: "#";
+  }
+}
+
+h1 {
+  font-family: $cabin;
+  font-size: 2.8em;
+  color: black;
+  font-weight: 700;
+}
+
+h1.white {
+  font-family: $cabin;
+  font-size: 2.8em;
+  color: $white;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: $roboto;
+  font-size: 1.8em;
+  color: $dark-blue;
+  font-weight: 300;
+}
+
+h3 {
+  font-family: $roboto;
+  font-size: 1.4em;
+  color: $dark-blue;
+  font-weight: 300;
+}
+
+h4 {
+  font-family: $roboto;
+  font-size: 1.4em;
+  color: $white;
+  font-weight: 300;
+}
+
+h5 {
+  font-family: $roboto;
+  font-size: 1.1em;
+  color: $white;
+  font-weight: 300;
+}
+
+p {
+  font-family: $cabin;
+  font-size: 1em;
+  color: black;
+}
+
+span.ribbon-text {
+  font-family: $roboto;
+  font-size: 1em;
+  color: $white;
+  font-weight: 300;
+}
+
+a.pseudo-tag {
+  color: #9E9E9E;
+  font-family: $roboto;
+  font-size: .9em;
+  font-weight: 300;
+}
+
+button, input[type=submit] {
+  background: $dark-blue;
+  color: $white;
+  border-radius: 8px;
+  font-family: $cabin;
+  font-weight: 700;
+  border: none;
+  outline: none;
+}
+
+button.grey, input[type=reset] {
+  background: #8e8e8e;
+  color: white;
+  border-radius: 8px;
+  font-family: $cabin;
+  font-weight: 700;
+  border: none;
+  outline: none;
+}

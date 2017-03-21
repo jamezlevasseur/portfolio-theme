@@ -1,3 +1,4 @@
+
 /* ========================================================================
  * DOM-based Routing
  * Based on http://goo.gl/EUTi53 by Paul Irish
@@ -10,7 +11,38 @@
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
 
+
+
 (function($) {
+
+  var birthdayLI = function () {
+    var bday =  moment([1993, 5, 12, 0, 0, 0]);
+    bday = bday.tz('America/New_York');
+    var now = moment();
+    now = now.tz('America/New_York');
+
+    var years = Math.floor( now.diff(bday, 'years', true) );
+    var months = Math.floor( now.diff(bday, 'months', true) )%12;
+    var weeks = Math.floor( now.diff(bday, 'weeks', true) )%4;
+    var days = Math.floor( now.diff(bday, 'days', true) )%7;
+    var hours = Math.floor( now.diff(bday, 'hours', true) )%24;
+    var minutes = Math.floor( now.diff(bday, 'minutes', true) )%60;
+    var seconds = Math.floor( now.diff(bday, 'seconds', true) )%60;
+
+    months = months>1 ? months+' months' : months+' month';
+    weeks = weeks>1 ? weeks+' weeks' : weeks+' week';
+    days = days>1 ? days+' days' : days+' day';
+    hours = hours>1 ? hours+' hours' : hours+' hour';
+    minutes = minutes>1 ? minutes+' minutes' : minutes+' minute';
+    seconds = seconds>1 ? seconds+' seconds' : seconds+' second';
+
+    $('#bday').remove();
+
+    $('.cute-list').append('<li id="bday">I am '+years+' years, '+months+', '+weeks+', '+days+', '+hours+', '+minutes+', and '+seconds+' old.</li>')
+    setTimeout(function () {
+        birthdayLI();
+    }, 5000);
+  }
 
   // Use this variable to set up the common and page specific functions. If you
   // rename this variable, you will also need to rename the namespace below.
@@ -19,15 +51,31 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+        jQuery('.ribbon-text').circleType({position: 'relative', radius: 500, dir: -1, fitText:true});
+        $('#contact-form input[type=submit]').click(function () {
+          if ($('#contact-form input[type=text][name=first-name]').val()=='' ||
+              $('#contact-form input[type=text][name=last-name]').val()=='' ||
+              $('#contact-form input[type=text][name=subject]').val()=='' ||
+              $('#contact-form textarea[name=message]').val()==''
+            )
+            {
+              alert('Please fill out all fields.');
+              return false;
+            }
+        });
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
+
       }
     },
     // Home page
     'home': {
       init: function() {
-        // JavaScript to be fired on the home page
+        $('.cute-list').append('<li>I have most of my experience building things in Wordpress, JS, PHP, and Java. <a href="http://localhost:8888/portfolio/wp-content/uploads/2017/03/levasseur_resume.pdf" target="_blank">Click here for my Resume</a>, or <a href="http://localhost:8888/portfolio/wp-content/uploads/2017/03/monty-python-spanish-inquisition.png" target="_blank">here for a picture of a squirrel</a>.</li>')
+        $('.cute-list').append('<li>I like mucking around on code fights. <a href="https://codefights.com/profile/james_guy_dude" target="_blank">Here\'s my profile</a>.')
+        birthdayLI();
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
