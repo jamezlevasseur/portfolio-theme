@@ -1,5 +1,5 @@
 <section id="intro" class="fluid-container">
-  <div class="">
+  <div class="col-md-8 col-md-offset-2">
 
     <img id="bighead" src="<?php echo IMAGES_URL.'bighead.png'; ?>" alt="a representation of my big head">
 
@@ -70,7 +70,7 @@
         }
     }
      ?>
-     <img class="divider" src="<?php echo IMAGES_URL.'divider.png'; ?>" alt="divider">
+     <div class="divider"></div>
 
     <h3>Or maybe you're looking for something specific?</h3>
     <div id="popular-tags">

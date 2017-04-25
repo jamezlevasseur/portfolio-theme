@@ -21,7 +21,7 @@
 			});
 			t.attr('aria-label',text)
 			.empty()
-			.append(inject)
+			.append(inject);
 
 		}
 	}

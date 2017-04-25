@@ -38,11 +38,11 @@
 
     $('#bday').remove();
 
-    $('.cute-list').append('<li id="bday">I am '+years+' years, '+months+', '+weeks+', '+days+', '+hours+', '+minutes+', and '+seconds+' old.</li>')
+    $('.cute-list').append('<li id="bday">I am '+years+' years, '+months+', '+weeks+', '+days+', '+hours+', '+minutes+', and '+seconds+' old.</li>');
     setTimeout(function () {
         birthdayLI();
     }, 5000);
-  }
+  };
 
   // Use this variable to set up the common and page specific functions. If you
   // rename this variable, you will also need to rename the namespace below.
@@ -53,10 +53,10 @@
         // JavaScript to be fired on all pages
         jQuery('.ribbon-text').circleType({position: 'relative', radius: 500, dir: -1, fitText:true});
         $('#contact-form input[type=submit]').click(function () {
-          if ($('#contact-form input[type=text][name=first-name]').val()=='' ||
-              $('#contact-form input[type=text][name=last-name]').val()=='' ||
-              $('#contact-form input[type=text][name=subject]').val()=='' ||
-              $('#contact-form textarea[name=message]').val()==''
+          if ($('#contact-form input[type=text][name=first-name]').val()==='' ||
+              $('#contact-form input[type=text][name=last-name]').val()==='' ||
+              $('#contact-form input[type=text][name=subject]').val()==='' ||
+              $('#contact-form textarea[name=message]').val()===''
             )
             {
               alert('Please fill out all fields.');
@@ -73,8 +73,8 @@
     // Home page
     'home': {
       init: function() {
-        $('.cute-list').append('<li>I have most of my experience building things in Wordpress, JS, PHP, and Java. <a href="http://localhost:8888/portfolio/wp-content/uploads/2017/03/levasseur_resume.pdf" target="_blank">Click here for my Resume</a>, or <a href="http://localhost:8888/portfolio/wp-content/uploads/2017/03/monty-python-spanish-inquisition.png" target="_blank">here for a picture of a squirrel</a>.</li>')
-        $('.cute-list').append('<li>I like mucking around on code fights. <a href="https://codefights.com/profile/james_guy_dude" target="_blank">Here\'s my profile</a>.')
+        $('.cute-list').append('<li>I have most of my experience building things in Wordpress, JS, PHP, and Java. <a href="http://localhost:8888/portfolio/wp-content/uploads/2017/03/levasseur_resume.pdf" target="_blank">Click here for my Resume</a>, or <a href="http://localhost:8888/portfolio/wp-content/uploads/2017/03/monty-python-spanish-inquisition.png" target="_blank">here for a picture of a squirrel</a>.</li>');
+        $('.cute-list').append('<li>I like mucking around on code fights. <a href="https://codefights.com/profile/james_guy_dude" target="_blank">Here\'s my profile</a>.');
         birthdayLI();
       },
       finalize: function() {

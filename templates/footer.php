@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
 
-      <div class="col-md-6">
+      <div class="col-md-4">
         <h4>Contact Me</h4>
         <h5>Please fill out all fields.</h5>
         <form id="contact-form" action="" method="post">
@@ -29,7 +29,7 @@
            ?>
         </ul>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-4">
         <h4>Navigation</h4>
         <ul>
           <li><a href="<?php echo get_site_url() ?>">About</a></li>

@@ -1,15 +1,25 @@
-why does page take so long to scroll down? - 4 [REVISIT]
+why does page take so long to scroll down? - 4 [REVISIT/ NO PROBLEM ON PRODUCTION SITE]
 
-top menu - 1 [GOOD ENOUGH FOR REG]
+top menu - [V1] DONE
 
-curved text - 2 [GOOD ENOUGH FOR REG]
+curved text - [V1] DONE
 
-touch up footer - 5 [LATER]
+touch up footer - [NOT DONE]
 
-goofy facts - 3 [MAKE MORE LATER]
+goofy facts - [V1]
 
-desktop version - 5.1 
+laptop/desktop/big screen friendly - [NOT DONE]
 
-mobile friendly [last] - 6
+mobile friendly - [V2/3]
 
-touch up head/variations [last]
+touch up head/variations - [V1]
+
+have "I'm a ..." cycle between things [V1]
+
+add link input for jokes - [NOT DONE]
+
+V1 - ready for desktop users, some missing features
+
+V2 - all features, bells and whistles
+
+V3 - mobile friendly
