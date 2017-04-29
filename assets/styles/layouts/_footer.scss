@@ -4,6 +4,10 @@ footer.content-info {
   padding: 40px 15%;
   position: relative;
 
+  @include laptop {
+    padding: 0;
+  }
+
   a {
     &:link {
       color: $white;
@@ -18,5 +22,10 @@ footer.content-info {
     display: block;
     float: left;
     padding-top: 20px;
+  }
+
+  form input, form textarea {
+    margin: 5px 0;
+    padding: 3px;
   }
 }

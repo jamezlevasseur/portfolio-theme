@@ -5,3 +5,20 @@
 body.home #page-content {
   padding: 0!important;
 }
+
+.entry-title {
+  margin-top: 50px;
+
+  @include laptop {
+    margin-top: 0;
+  }
+}
+
+.tags-container a {
+  display: inline-block;
+  margin: 6px;
+
+  @include laptop {
+    margin: 10px;
+  }
+}

@@ -22,6 +22,7 @@ $medium: 18px;
 $small: 14px;
 
 $phone: 480px;
+$phone-side: 560px;
 $bigphone: 667px;
 $tablet: 768px;
 $laptop: 1024px;
@@ -34,8 +35,22 @@ $bigscreen: 1600px;
   }
 }
 
+@mixin phone-landscape {
+  @media (min-width: #{$phone})
+  and (orientation : landscape) {
+    @content;
+  }
+}
+
 @mixin bigphone {
   @media (min-width: #{$bigphone}) {
+    @content;
+  }
+}
+
+@mixin bigphone-landscape {
+  @media (min-width: #{$bigphone})
+  and (orientation : landscape) {
     @content;
   }
 }

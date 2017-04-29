@@ -9,10 +9,31 @@
   padding-top: 10vh;
 
   #bighead {
-    width: 35%;
+    width: 50%;
     display: block;
     margin: 0 auto;
     padding: 50px 0;
+
+    @include phone-landscape {
+      width: 20%;
+      display: block;
+      margin: 0 auto;
+      padding: 50px 0 5px 0;
+    }
+
+    @include bigphone-landscape {
+      width: 20%;
+      display: block;
+      margin: 0 auto;
+      padding: 50px 0 25px 0;
+    }
+
+    @include laptop {
+      width: 35%;
+      display: block;
+      margin: 0 auto;
+      padding: 50px 0;
+    }
   }
 }
 
@@ -42,20 +63,43 @@ section.container {
     }
 
     .lefty {
-      display: inline-block;
+      display: block;
       vertical-align: top;
-      width: 49%;
-      padding-right: 1.5em;
+
+      @include laptop {
+        display: inline-block;
+        vertical-align: top;
+        width: 49%;
+        padding-right: 1.5em;
+      }
     }
     .righty {
       display: inline-block;
       vertical-align: top;
-      width: 49%;
+      padding-top: 20px;
+
+      @include laptop {
+        display: inline-block;
+        vertical-align: top;
+        width: 49%;
+        padding-top: 0px;
+      }
 
       .cute-list {
         text-align: left;
-        padding-left: 1.5em;
         list-style: square inside url('../images/bullet.png')!important;
+
+        @include laptop {
+          padding-left: 1.5em;
+        }
+
+        li {
+          padding: 10px 0;
+
+          @include laptop {
+            padding: 0;
+          }
+        }
       }
     }
   }
@@ -82,6 +126,10 @@ section.container {
 
     #popular-tags {
       padding: 1em 10% 0;
+
+      a {
+        display: inline-block;
+      }
     }
 
     > h2 {
@@ -92,8 +140,16 @@ section.container {
     $ribbon-width: 200px;
 
     .sticky-project {
+      margin: 0 auto;
       display: inline-block;
-      margin: 0 $ribbon-width/$pi;
+
+      @include phone-landscape {
+        padding: 0 15%;
+      }
+
+      @include laptop {
+          margin: 0 $ribbon-width/$pi;
+      }
 
       .ribbon {
         position: relative;
