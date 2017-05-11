@@ -1,11 +1,25 @@
 footer.content-info {
-  background: #3A3A3A;
+  background: #1c1c1c;
   color: $white;
-  padding: 40px 15%;
+  padding: 40px 10%;
   position: relative;
+
+  @include tablet {
+    padding: 0;
+  }
 
   @include laptop {
     padding: 0;
+  }
+
+  #main-footer-row {
+    @include laptop {
+        padding: 20px;
+    }
+  }
+
+  input, textarea {
+    border-radius: 4px;
   }
 
   a {
@@ -16,16 +30,57 @@ footer.content-info {
 
   small {
     font-family: $cabin;
-    font-size: .6em;
+    font-size: .9em;
     color: $white;
     font-weight: 300;
     display: block;
     float: left;
-    padding-top: 20px;
+    padding: 20px 0;
   }
 
   form input, form textarea {
     margin: 5px 0;
-    padding: 3px;
+    padding: 6px;
   }
+
+  form input[type=reset], form input[type=submit] {
+    padding: 6px;
+  }
+}
+
+footer#bottom-row {
+    background: #333333;
+    color: $white;
+    padding: 40px 15%;
+    position: relative;
+
+    @include tablet {
+      padding: 0;
+    }
+
+    @include laptop {
+      padding: 0;
+    }
+
+    #main-footer-row {
+      @include laptop {
+          padding: 20px;
+      }
+    }
+
+    #small-left {
+      white-space: nowrap;
+      text-align: center;
+      @include tablet {
+        text-align: left;
+      }
+    }
+    #small-right {
+      white-space: nowrap;
+      text-align: center;
+      @include tablet {
+        float: right;
+        text-align: left;
+      }
+    }
 }

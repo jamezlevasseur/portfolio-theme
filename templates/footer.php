@@ -1,6 +1,6 @@
 <footer class="content-info">
   <div class="container">
-    <div class="row">
+    <div class="row" id="main-footer-row">
 
       <div class="col-md-4">
         <h4>Contact Me</h4>
@@ -38,7 +38,15 @@
       </div>
 
     </div>
-
-    <small>©Copyright <?php echo date("Y"); ?>, James LeVasseur</small>
+  </div>
+</footer>
+<footer id="bottom-row">
+  <div class="fluid-container">
+    <div class="row" style="margin:0;">
+      <div class="col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
+        <small id="small-left">©Copyright <?php echo date("Y"); ?>, James LeVasseur</small>
+        <small id="small-right">or just email me at <a href="mailto:james.levasseur@maine.edu?Subject=I%20Saw%20Your%20Portfolio" target="_top" style="color:white!important;text-decoration:underline;">james.levasseur@maine.edu</a></small>
+      </div>
+    </div>
   </div>
 </footer>

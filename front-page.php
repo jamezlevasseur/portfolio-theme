@@ -1,5 +1,5 @@
 <section id="intro" class="fluid-container">
-  <div class="col-md-8 col-md-offset-2">
+  <div class="col-md-12 col-sm-12">
 
     <img id="bighead" src="<?php echo IMAGES_URL.'bighead.png'; ?>" alt="a representation of my big head">
 

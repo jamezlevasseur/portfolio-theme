@@ -28,8 +28,22 @@
       padding: 50px 0 25px 0;
     }
 
-    @include laptop {
+    @include tablet {
       width: 35%;
+      display: block;
+      margin: 10% auto;
+      padding: 50px 0 25px 0;
+    }
+
+    @include laptop {
+      width: 22%;
+      display: block;
+      margin: 0 auto;
+      padding: 50px 0;
+    }
+
+    @include desktop {
+      width: 23%;
       display: block;
       margin: 0 auto;
       padding: 50px 0;
@@ -142,9 +156,14 @@ section.container {
     .sticky-project {
       margin: 0 auto;
       display: inline-block;
+      margin: 0 15%;
 
       @include phone-landscape {
-        padding: 0 15%;
+        margin: 0 15%;
+      }
+
+      @include tablet {
+        margin: 0 15%;
       }
 
       @include laptop {

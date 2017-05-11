@@ -7,7 +7,7 @@ html {
     font-size: $medium;
   }
 
-  @include desktop {
+  @include laptop {
     font-size: $large;
   }
 
@@ -80,6 +80,10 @@ h1.white {
     font-size: 1.8em;
     margin-top: 0;
   }
+
+  @include tablet {
+    font-size: 4em;
+  }
 }
 
 h2 {
@@ -141,7 +145,7 @@ button, input[type=submit] {
 }
 
 button.grey, input[type=reset] {
-  background: #8e8e8e;
+  background: #686868;
   color: white;
   border-radius: 8px;
   font-family: $cabin;

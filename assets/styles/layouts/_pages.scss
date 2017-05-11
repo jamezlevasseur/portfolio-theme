@@ -6,12 +6,33 @@ body.home #page-content {
   padding: 0!important;
 }
 
-.entry-title {
-  margin-top: 50px;
+#page-content > .page-header {
+  margin-top: 70px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+
+  > h1 {
+    margin-bottom: 0;
+  }
+
+  @include tablet {
+    margin-top: 70px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    > h1 {
+      margin-bottom: 0;
+    }
+  }
 
   @include laptop {
-    margin-top: 0;
+    margin-bottom: 40px;
+    padding-bottom: 0;
   }
+}
+
+.entry-title {
+  margin-top: 50px;
 }
 
 .tags-container a {
