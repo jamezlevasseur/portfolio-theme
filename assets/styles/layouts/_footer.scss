@@ -48,6 +48,10 @@ footer.content-info {
   }
 }
 
+footer input, footer textarea {
+  color: black!important;
+}
+
 footer#bottom-row {
     background: #333333;
     color: $white;
@@ -55,11 +59,11 @@ footer#bottom-row {
     position: relative;
 
     @include tablet {
-      padding: 0;
+      padding: 10px 0;
     }
 
     @include laptop {
-      padding: 0;
+      padding: 10px 0;
     }
 
     #main-footer-row {

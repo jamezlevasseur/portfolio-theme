@@ -15,6 +15,8 @@
 
 (function($) {
 
+  var formCanSubmit = false;
+
   var birthdayLI = function () {
     var bday =  moment([1993, 5, 12, 0, 0, 0]);
     bday = bday.tz('America/New_York');
@@ -52,7 +54,12 @@
       init: function() {
         // JavaScript to be fired on all pages
         jQuery('.ribbon-text').circleType({position: 'relative', radius: 500, dir: -1, fitText:true});
-        $('#contact-form input[type=submit]').click(function () {
+        $('#contact-form input[type=submit]').click(function (e) {
+          if ('' == grecaptcha.getResponse()) {
+            alert('fill out recaptcha.')
+            return false;
+          }
+
           if ($('#contact-form input[type=text][name=first-name]').val()==='' ||
               $('#contact-form input[type=text][name=last-name]').val()==='' ||
               $('#contact-form input[type=text][name=subject]').val()==='' ||
@@ -73,7 +80,7 @@
     // Home page
     'home': {
       init: function() {
-        $('.cute-list').append('<li>I have most of my experience building things in Wordpress, JS, PHP, and Java. <a href="http://localhost:8888/portfolio/wp-content/uploads/2017/03/levasseur_resume.pdf" target="_blank">Click here for my Resume</a>, or <a href="http://localhost:8888/portfolio/wp-content/uploads/2017/03/monty-python-spanish-inquisition.png" target="_blank">here for a picture of a squirrel</a>.</li>');
+        $('.cute-list').append('<li>I have most of my experience building things in Wordpress, JS, PHP, and Java. <a href="http://localhost:8888/portfolio/wp-content/uploads/2017/03/levasseur_resume.pdf" target="_blank">Click here for my Resume</a>, or <a href="http://localhost:8888/portfolio/wp-content/uploads/2017/03/monty-python-spanish-inquisition.png" target="_blank">here for something unexpected</a>.</li>');
         $('.cute-list').append('<li>I like mucking around on code fights. <a href="https://codefights.com/profile/james_guy_dude" target="_blank">Here\'s my profile</a>.');
         birthdayLI();
       },

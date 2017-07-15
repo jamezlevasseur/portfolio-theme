@@ -29,6 +29,13 @@ unset($file, $filepath);
 
 function send_contact_email()
 {
+  require_once('recaptchalib.php');
+  $recaptchaResponse = $_POST['g-recaptcha-response'];
+  $secretKey = '6Le4oCgUAAAAAJhSA8rS9lfj_oHs0_zN4MwXgnlz';
+  $request = json_decode(
+    file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$recaptchaResponse)
+  );
+
   $to_email = 'james.levasseur@maine.edu';
 
   $from = $_POST['first-name'].' '.$_POST['last-name'];

@@ -12,7 +12,15 @@
           <textarea name="message" rows="4" cols="30" placeholder="You message..."></textarea><br>
           <input type="reset">
           <input type="submit">
+          <div class="g-recaptcha" data-sitekey="6Le4oCgUAAAAAHrOA830WKDmLS0PGRKNeb8NHIRh"></div>
         </form>
+      </div>
+      <div class="col-md-4">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="<?php echo get_site_url() ?>">About</a></li>
+          <li><a href="<?php echo get_site_url().'blog' ?>">Blog</a></li>
+        </ul>
       </div>
       <div class="col-md-4">
         <h4>Posts</h4>
@@ -29,13 +37,6 @@
            ?>
         </ul>
       </div>
-      <div class="col-md-4">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="<?php echo get_site_url() ?>">About</a></li>
-          <li><a href="<?php echo get_site_url().'blog' ?>">Blog</a></li>
-        </ul>
-      </div>
 
     </div>
   </div>
@@ -50,3 +51,5 @@
     </div>
   </div>
 </footer>
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
