@@ -80,6 +80,7 @@
     // Home page
     'home': {
       init: function() {
+        
         $('.cute-list').append('<li>I have most of my experience building things in Wordpress, JS, PHP, and Java. <a href="http://jameslevasseur.com/wp-content/uploads/2017/05/levasseur_resume.pdf" target="_blank">Click here for my Resume</a>, or <a href="http://jameslevasseur.com/wp-content/uploads/2017/03/monty-python-spanish-inquisition.png" target="_blank">here for something unexpected</a>.</li>');
         $('.cute-list').append('<li>I like mucking around on code fights. <a href="https://codefights.com/profile/james_guy_dude" target="_blank">Here\'s my profile</a>.');
         birthdayLI();
