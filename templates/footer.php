@@ -10,9 +10,9 @@
           <input type="text" name="last-name" placeholder="Last Name"><br>
           <input type="text" name="subject" placeholder="Subject"><br>
           <textarea name="message" rows="4" cols="30" placeholder="You message..."></textarea><br>
+          <div class="g-recaptcha" data-sitekey="6Le4oCgUAAAAAHrOA830WKDmLS0PGRKNeb8NHIRh"></div>
           <input type="reset">
           <input type="submit">
-          <div class="g-recaptcha" data-sitekey="6Le4oCgUAAAAAHrOA830WKDmLS0PGRKNeb8NHIRh"></div>
         </form>
       </div>
       <div class="col-md-4">
